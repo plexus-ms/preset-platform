@@ -2,6 +2,10 @@
 # runs on its own occasions — it rides no release train (§ 8.2 PLX). Third-party
 # apps the tenant merely operates live under apps/<name>/ (§ 5.2 PLX).
 
+# Verbs are asked as `mise :verb` at the repo root like in every tenant repo
+# (§ 4.1 PLX); that form needs the root marker even without sub-projects.
+monorepo_root = true
+
 [tools]
 hk = "latest" # Git hooks
 uv = "latest" # required for ansible and copier
