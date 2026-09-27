@@ -1,0 +1,16 @@
+_subdirectory: template
+
+_tasks:
+  - "git init"
+  - "mise trust"
+  - "mise install"
+
+tenant:
+  type: str
+  help: "Tenant slug (URL-friendly)"
+  placeholder: "acme-corp"
+
+github_org:
+  type: str
+  help: "GitHub org of the tenant (image registry owner and forge org)"
+  default: "{{ tenant }}"
