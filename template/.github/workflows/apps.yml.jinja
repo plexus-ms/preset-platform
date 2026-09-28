@@ -2,14 +2,14 @@
 
 # Third-party apps hosted in this platform repo (§ 5.2, § 8.2 PLX): software
 # the tenant merely operates, declared as apps/<name>/{docker/compose.yaml,
-# env.schema,PLEXUS.md} with the image pinned in compose.yaml. On push to main,
+# PLEXUS.md} with the image pinned in compose.yaml. On push to main,
 # `changes` runs the changed-apps verb (plain path diff — no workspace here)
 # and `app` fans the deploy verb over exactly the apps whose files changed.
 # Nothing is built: the image is someone else's. Managed by copier: edit the
 # preset (plexus-ms/preset-repo-platform), never this file.
 #
-# The playbooks (provision.yml, deploy.yml) are NOT mounted on CI — they run
-# as root and are applied by an operator: `mise provision`, `mise deploy`.
+# The playbooks (provision.yml, configure.yml) are NOT mounted on CI — they
+# run as root and are applied by an operator: `mise provision`, `mise configure`.
 
 on:
   push:
